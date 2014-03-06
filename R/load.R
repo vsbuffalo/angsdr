@@ -1,8 +1,5 @@
 ## load.R -- load ANGSD data into GRanges objects
 
-library(GenomicRanges)
-
-
 #' Read a pestPG file from ANGSD
 #'
 #' This function reads a pestPG file from ANGSD into either a
