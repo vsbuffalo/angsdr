@@ -21,7 +21,7 @@ and install with:
 Data from a pestPG file can be loaded with:
 
     library(angsdr)
-		d <- readPestPG("inst/extdata/test.pestPG")
+    d <- readPestPG("inst/extdata/test.pestPG")
 
 ## Development
 
