@@ -28,14 +28,14 @@ library(GenomicRanges)
 #' \itemize{
 #'    \item Tajima's D (\code{taj_d})
 #'    \item Fu and Li F (\code{fuli_f})
-#'    \item Fu and Li's D (\code({fuli_d})
+#'    \item Fu and Li's D (\code{fuli_d})
 #'    \item Fay's H (\code{fay_h})
 #'    \item Zeng's E (\code{zeng_e})
 #' }
 #'
 #' @param file the pestPG-formatted file from ANGSD @param asGRanges
 #' \code{logical} indicating whether to return a \code{GRanges} object. If
-#' \text{FALSE}, will return a \code{data.frame}. @param physical
+#' \code{FALSE}, will return a \code{data.frame}. @param physical
 #' \code{logical} value indicating whether to use the window as the range, or
 #' whether to use the physical region the analysis included (for \code{GRanges}
 #' output only).

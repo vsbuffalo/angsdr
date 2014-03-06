@@ -8,7 +8,7 @@ readPestPG(file, asGRanges = TRUE, physical = FALSE)
   \item{file}{the pestPG-formatted file from ANGSD}
 
   \item{asGRanges}{\code{logical} indicating whether to
-  return a \code{GRanges} object. If \text{FALSE}, will
+  return a \code{GRanges} object. If \code{FALSE}, will
   return a \code{data.frame}.}
 
   \item{physical}{\code{logical} value indicating whether
@@ -40,7 +40,7 @@ pairwise diversity (\code{theta_pi}) \item Fu and Li
 L (\code{theta_l}) } As well as the follwing neutrality
 test statistics: \itemize{ \item Tajima's D (\code{taj_d})
 \item Fu and Li F (\code{fuli_f}) \item Fu and Li's D
-(\code({fuli_d}) \item Fay's H (\code{fay_h}) \item Zeng's
-E (\code{zeng_e}) }
+(\code{fuli_d}) \item Fay's H (\code{fay_h}) \item Zeng's E
+(\code{zeng_e}) }
 }
 
