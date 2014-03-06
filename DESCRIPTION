@@ -1,0 +1,13 @@
+Package: angsdr
+Version: 0.01
+Date: 2014-03-05
+Title: angsdr
+Author: Vince Buffalo
+Maintainer: Vince Buffalo <vsbuffalo@ucdavis.edu>
+Imports:
+    GenomicRanges
+Depends:
+    GenomicRanges
+Description: Minimal functions for loading ANGSD data.
+License: GPL (>=2)
+URL: http://github.com/vsbuffalo/angsdr
