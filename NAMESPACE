@@ -1,1 +1,2 @@
+export(overlapWidths)
 export(readPestPG)

@@ -5,9 +5,11 @@ Title: angsdr
 Author: Vince Buffalo
 Maintainer: Vince Buffalo <vsbuffalo@ucdavis.edu>
 Imports:
-    GenomicRanges, plyr
+    GenomicRanges,
+    plyr
 Depends:
-    GenomicRanges, plyr
+    GenomicRanges,
+    plyr
 Description: Minimal functions for loading ANGSD data.
 License: GPL (>=2)
 URL: http://github.com/vsbuffalo/angsdr
