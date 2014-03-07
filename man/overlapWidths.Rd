@@ -23,7 +23,8 @@ containing ANGSD windows, and \code{anno} is a
 \code{GRanges} object containing all exon ranges,
 \code{overlapWidths(x, anno)} will return a vector that can
 be used as \code{elementMetadata} in \code{x} to indicate
-how many bases in each range overlap \code{anno}.
+how many bases in each range overlap \code{anno}. Note that
+\code{overlapWidths} ignores strand.
 }
 \examples{
 test_file <- system.file("inst", "extdata", "test.pestPG", package="angsdr")

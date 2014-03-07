@@ -8,7 +8,8 @@
 #' \code{GRanges} object containing ANGSD windows, and \code{anno} is a
 #' \code{GRanges} object containing all exon ranges, \code{overlapWidths(x,
 #' anno)} will return a vector that can be used as \code{elementMetadata} in
-#' \code{x} to indicate how many bases in each range overlap \code{anno}.
+#' \code{x} to indicate how many bases in each range overlap \code{anno}. Note
+#' that \code{overlapWidths} ignores strand.
 #'
 #' @param anno a \code{GenomicRanges} object contaning annotation ranges.
 #' @param angsd a \code{GenomicRanges} object containing windows and summary statistics from ANGSD.
@@ -28,11 +29,13 @@ overlapWidths <- function (x, anno,
   if (!is(x, "GRanges") || !is(anno, "GRanges"))
     stop("both anno and x need to be GRanges objects")
 
+  ranno <- reduce(anno, ignore.strand=TRUE)
+
 	# find overlaps between angsd windows and annotation
-	olaps <- findOverlaps(x, anno, type=type)
+	olaps <- findOverlaps(x, ranno, type=type, ignore.strand=TRUE)
 
 	# extract overlappging ranges and the widths of these overlapping ranges
-	rr <- ranges(olaps, ranges(x), ranges(anno))
+	rr <- ranges(olaps, ranges(x), ranges(ranno))
 	w <- width(rr)
 
 	# there are n widths, now, where n is the number of overlapping ranges (e.g.

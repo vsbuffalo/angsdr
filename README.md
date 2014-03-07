@@ -24,6 +24,16 @@ Data from a pestPG file can be loaded with:
     library(angsdr)
     d <- readPestPG("inst/extdata/test.pestPG")
 
+The function `overlapWidths` can be used to annotate a ANGSD `GRanges` object
+with the proportion of a window that overlaps a feature, given by another
+`GRanges` object. For example:
+
+    library(rtracklayer)
+    gtf <- import("your_species.gtf")
+    coding <- gtf[gtf$source == "protein_coding"]
+    reduced_coding <- reduce(coding, ignore.strand=TRUE)
+    d$coding <- overlapWidths(d, reduced_coding)
+
 ## Development
 
 Please feel free to fork and participate in this package's development! If
