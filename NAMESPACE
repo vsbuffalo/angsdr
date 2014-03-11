@@ -1,2 +1,4 @@
 export(overlapWidths)
+export(readMultiplePestPG)
 export(readPestPG)
+export(smoothScatterHist)

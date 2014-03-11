@@ -2,7 +2,7 @@
 \alias{readPestPG}
 \title{Read a pestPG file from ANGSD}
 \usage{
-readPestPG(file, asGRanges = TRUE, physical = FALSE)
+readPestPG(file, asGRanges = TRUE, physical = FALSE, asDataFrame = FALSE)
 }
 \arguments{
   \item{file}{the pestPG-formatted file from ANGSD}
@@ -15,6 +15,11 @@ readPestPG(file, asGRanges = TRUE, physical = FALSE)
   to use the window as the range, or whether to use the
   physical region the analysis included (for \code{GRanges}
   output only).}
+
+  \item{asDataFrame}{\code{logical} value indicating
+  whether to use Bioconductor's \code{DataFrame} rather
+  than a standard \code{data.frame}. Requires
+  \code{asGRanges=FALSE}.}
 }
 \description{
 This function reads a pestPG file from ANGSD into either a
